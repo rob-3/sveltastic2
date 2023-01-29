@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
 import { type Readable, writable } from 'svelte/store';
-import type Card from '../components/Card.svelte';
+import type { Card } from '../types/Card';
 
 const cardsWritable = writable<Record<string, Card>>(
   browser ? JSON.parse(localStorage.getItem('card') ?? '{}') : {}

@@ -1,12 +1,3 @@
-<script context="module" lang="ts">
-  export interface Card {
-    title: string;
-    body: string;
-    color: string;
-    uuid: string;
-  }
-</script>
-
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
   import { cards } from '../stores/store';
