@@ -5,7 +5,9 @@ const config = {
 		extend: {}
 	},
 
-	plugins: [require('@catppuccin/tailwindcss')]
+	plugins: [require('@catppuccin/tailwindcss')({
+		defaultFlavour: 'macchiato'
+	})]
 };
 
 module.exports = config;
