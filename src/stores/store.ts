@@ -24,14 +24,20 @@ export const cards = {
   removeCard,
 };
 
+let firstLoad = true;
 let oldTimeout: NodeJS.Timeout;
 cards.subscribe((value) => {
   clearTimeout(oldTimeout);
-  isSavingWritable.set(true);
-  oldTimeout = setTimeout(() => {
-    if (browser) {
-      localStorage.setItem('card', JSON.stringify(value));
-    }
-    isSavingWritable.set(false);
-  }, 1000);
+  if (firstLoad) {
+    firstLoad = false;
+  } else {
+    firstLoad = false;
+    isSavingWritable.set(true);
+    oldTimeout = setTimeout(() => {
+      if (browser) {
+        localStorage.setItem('card', JSON.stringify(value));
+      }
+      isSavingWritable.set(false);
+    }, 1000);
+  }
 });
