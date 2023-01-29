@@ -34,6 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@catppuccin/tailwindcss": "^0.1.1",
 		"@types/uuid": "^9.0.0",
 		"uuid": "^9.0.0"
 	}

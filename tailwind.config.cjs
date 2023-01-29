@@ -5,7 +5,7 @@ const config = {
 		extend: {}
 	},
 
-	plugins: []
+	plugins: [require('@catppuccin/tailwindcss')]
 };
 
 module.exports = config;
