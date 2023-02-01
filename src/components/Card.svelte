@@ -12,9 +12,9 @@
 <div
   class="flex flex-col justify-start items-start p-4 bg-slate-700 rounded-md"
 >
-  <div class="flex w-full justify-end items-center">
+  <div class="flex w-full items-center gap-2">
     <h1
-      class={`font-bold text-2xl mr-auto w-[60%] ${$cards[uuid].color}`}
+      class={`font-bold text-2xl flex-1 overflow-auto ${$cards[uuid].color}`}
       contenteditable
       bind:innerHTML={$cards[uuid].title}
     >
@@ -38,7 +38,7 @@
     </button>
   </div>
 
-  <div class="w-full" contenteditable bind:innerHTML={$cards[uuid].body}>
+  <div class="w-full overflow-auto" contenteditable bind:innerHTML={$cards[uuid].body}>
     {$cards[uuid].body}
   </div>
 </div>
